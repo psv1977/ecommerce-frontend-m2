@@ -1,0 +1,54 @@
+/* 1. Reset y Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* 2. Estilo para las Imágenes de los Yates (UX) */
+/* Esto asegura que todas las imágenes tengan el mismo tamaño sin deformarse */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto Hover para las Cards (Excelente en UX) */
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card {
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* 3. Personalización del Navbar */
+.navbar-brand {
+    letter-spacing: 1px;
+    color: #ffc107 !important; /* Un tono dorado para los yates */
+}
+
+#cart-count {
+    font-size: 0.8rem;
+    vertical-align: top;
+}
+
+/* 4. Footer Ficticio (Requisito 3) */
+footer {
+    border-top: 3px solid #ffc107;
+}
+
+/* 5. Ajustes para el Mobile-First (Requisito 4) */
+@media (max-width: 420px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-img-top {
+        height: 200px;
+    }
+}
