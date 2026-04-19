@@ -9,13 +9,13 @@ const yates = [
         categoria: "Lujo"
     },
     {
-        id: 2,
-        nombre: "Sport Cruiser X",
-        precio: 1800000,
-        descripcion: "Velocidad y diseño aerodinámico para los amantes de la adrenalina.",
-        imagen: "https://images.unsplash.com/photo-1540946484617-41d4f738ba4c?q=80&w=600",
-        categoria: "Deportivo"
-    },
+    id: 2,
+    nombre: "Sport Cruiser X",
+    precio: 1800000,
+    // REEMPLAZA LA LÍNEA DE ABAJO
+    imagen: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?q=80&w=600", 
+    categoria: "Deportivo"
+},
     {
         id: 3,
         nombre: "Eco-Spirit 2026",
