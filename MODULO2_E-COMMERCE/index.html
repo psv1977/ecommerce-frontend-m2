@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YateLux Chile - E-commerce de Yates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">YateLux</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-lg-3" href="#">
+                            Carrito 🛒 <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-light py-5 border-bottom">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bolder">Tu próxima aventura comienza aquí</h1>
+            <p class="lead mb-0">Explora nuestra exclusiva selección de yates de lujo y deportivos.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section>
+            <h2 class="text-center mb-4">Nuestra Flota</h2>
+            <div class="row" id="contenedor-yates">
+                
+                <article class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=600" class="card-img-top" alt="Viking Majesty">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Viking Majesty</h5>
+                            <p class="card-text text-muted">Yate de lujo con acabados de alta gama.</p>
+                            <p class="fw-bold fs-5">$5.200.000 USD</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0 d-grid">
+                            <button class="btn btn-primary" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
+        </section>
+    </main>
+
+    <footer class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <p class="m-0">Copyright &copy; YateLux Chile 2026</p>
+            <p class="small text-secondary">Viña del Mar, Valparaíso | Contacto: info@yatelux.cl</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
