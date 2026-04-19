@@ -54,3 +54,34 @@ function agregarAlCarrito(id) {
 // Ejecutamos la actualización al cargar el script para que no se pierda el número al refrescar
 actualizarContador();
 
+// 5. RENDERIZADO DINÁMICO [Requisito: Etiquetas Semánticas]
+function renderizarYates() {
+    const contenedor = document.querySelector('#contenedor-yates');
+    if (!contenedor) return;
+
+    contenedor.innerHTML = ""; // Limpiar antes de cargar
+
+    yates.forEach(yate => {
+        const div = document.createElement('div');
+        div.className = "col-md-4 mb-4";
+        
+        // Aquí insertamos la etiqueta <article> para la rúbrica
+        div.innerHTML = `
+            <article class="card h-100 shadow-sm">
+                <img src="${yate.imagen}" class="card-img-top" alt="${yate.nombre}">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-primary">${yate.nombre}</h5>
+                    <p class="card-text flex-grow-1">${yate.descripcion}</p>
+                    <p class="fw-bold fs-5">$${yate.precio.toLocaleString()} USD</p>
+                    <button onclick="agregarAlCarrito(${yate.id})" class="btn btn-primary w-100">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </article>
+        `;
+        contenedor.appendChild(div);
+    });
+}
+
+// Llamar a la función al cargar la página
+renderizarYates();
