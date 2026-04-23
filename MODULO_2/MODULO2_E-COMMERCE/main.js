@@ -20,7 +20,7 @@ const yates = [
         id: 3,
         nombre: "Eco-Spirit 2026",
         precio: 3500000,
-        descripcion: "Propulsión híbrida sustentable diseñada para navegación silenciosa.",
+        descripcion: "Propulsión híbrida sustentable diseñada para navegación silenciosa.",git 
         imagen: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=600",
         categoria: "Sustentable"
     }
