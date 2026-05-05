@@ -134,6 +134,6 @@ mi_perro = Perro("Cachupín", 3, "Kill-terrier")
 mi_perro.ladrar()
 
 # Mostrar la información del perro
-print(mi_perro.mostrar_info())  # Salida: Nombre: Fido, Edad: 3, Raza: Labrador 
+print(mi_perro.mostrar_info())  
 
 

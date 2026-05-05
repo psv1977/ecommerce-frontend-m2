@@ -1,0 +1,43 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Persona {
+    # _rut: String
+    + nombre: String
+    + edad: int
+    + mostrar_rol(): String
+    + __str__(): String
+}
+
+class Estudiante {
+    + matricula: String
+    + calificaciones: List
+    + mostrar_rol(): String
+    + agregar_calificacion(nota: float, ponderacion: float)
+}
+
+class Profesor {
+    + especialidad: String
+    + mostrar_rol(): String
+}
+
+class Curso {
+    + nombre_curso: String
+    + codigo: String
+    + profesor_titular: Profesor
+    + lista_estudiantes: List<Estudiante>
+    + asignar_profesor(profesor: Profesor)
+    + matricular_estudiante(estudiante: Estudiante)
+    + mostrar_informacion_curso()
+}
+
+' Relaciones de Herencia
+Persona <|-- Estudiante
+Persona <|-- Profesor
+
+' Relaciones de Asociación/Composición
+Curso "0..1" o-- "1" Profesor : tiene asignado
+Curso "1" o-- "0..*" Estudiante : tiene matriculados[cite: 1]
+
+@enduml
